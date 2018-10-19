@@ -1,0 +1,66 @@
+<head>
+
+  <!--- basic page needs
+  ================================================== -->
+  <meta charset="utf-8">
+ <title>Kishore Portfolio</title>
+ <meta name="description" content="">  
+ <meta name="author" content="Kishore">
+
+  <!-- mobile specific metas
+  ================================================== -->
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+  <!--JS - scripts-->
+  <link rel="javascript" href="assets/js/bganim.js">
+
+  <!-- fav icon -->
+ <link rel="icon" type="assets/image/png" href="favicon.png">
+
+</head>
+
+<body id="top">  
+  <app-root></app-root>
+        <!-- intro section
+   ================================================== -->
+   <div id="intro" [ngStyle]="setBgStyle()" (document:mousemove)="onMouseMove($event)">   
+    <div class="intro-overlay"></div>	
+    
+    <div class="intro-content">
+      <div class="row">
+
+        <div class="col-twelve">
+
+          <h5>Chandra Kishore Danduri</h5>
+          <!-- <h2>Chandra Kishore Danduri</h2> -->
+
+          <p class="intro-position">
+            <span>Java Developer</span>
+            <span>Front End Developer</span>
+            <span>UI/UX Designer</span> 
+            <span>C# Developer</span> 
+            <span>Game/Unity Developer</span> 
+            <span>Data Analyst</span>
+          </p>
+          <a class="button stroke smoothscroll" (click)=scrollToElement()>More About Me</a>
+          
+        </div>  
+        
+      </div>   		 		
+    </div> <!-- /intro-content --> 
+    <ul class="intro-social">       
+        <li><a (click) = "redirect_social('linkedin')" matTooltip = "LinkedIn"><i class="fa fa-linkedin-square"></i></a></li>
+        <li><a (click) = "redirect_social('github')" matTooltip = "GitHub"><i class="fa fa-github"></i></a></li>
+        <li><a (click) = "redirect_social('twitter')" matTooltip = "Twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a (click) = "redirect_social('instagram')" matTooltip = "Instagram"><i class="fa fa-instagram"></i></a></li>
+     </ul> <!-- /intro-social -->      	
+
+    </div> <!-- /intro -->
+    
+</body>

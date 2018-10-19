@@ -1,0 +1,71 @@
+body {
+    font-family: Arial;
+    color: white;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background-color: #111;
+}
+
+.right {
+    right: 0;
+    background-color: red;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.image{
+    background-size:cover; width:auto;
+    background-image:url('../../assets/images/aboutWallpaper/wp4.jpg');
+  }
+
+#table{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: left;
+    display: inline;
+    padding-top: 5rem;
+}
+
+@font-face {
+    font-family: "Harabara Bold";
+    src: url("../../assets/fonts/raleway/Raleway-Black.ttf");
+  }
+
+.edt{
+    font-style: 'Harabara Bold',sans-serif;
+    text-align: left; 
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    width: 50%;
+}
+/* 
+.edt td p:before{
+    content: ' \2714';
+    padding-top: 0%;
+} */
+
+.edt tf p::before{
+    content: '';
+}

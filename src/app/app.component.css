@@ -1,0 +1,53 @@
+mat-toolbar {
+    position: relative;
+    z-index: 1;
+    overflow-x: auto;
+    background-color: #000000;
+    height: 6%;
+    opacity: 1;
+  }
+  
+  md-toolbar-row {
+    justify-content:space-between;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .link_social a{
+	  margin: 0 10px;
+    padding: 0px;
+    color: white;
+  }
+
+  .link_social a, .intro-social li a:visited {
+    color: #FFFFFF;
+  }
+  .link_social a:hover, .intro-social li a:focus {
+    color: #49a8f5;
+  }
+
+  
+  a.active {
+    background-color: #49a8f5;
+    color:#ffffff;
+  }
+  @font-face {
+    font-family: "Harabara Bold";
+    src: url("../assets/fonts/raleway/Raleway-Black.ttf");
+  }
+
+  a {
+    font-style: 'Harabara Bold',sans-serif;
+    text-align: center; 
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  h1 {
+    margin: 0;
+  }
+  
+  h1 .light {
+    font-weight: 50;
+  }

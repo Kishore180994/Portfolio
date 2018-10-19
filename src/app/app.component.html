@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+<mat-toolbar>
+  <!-- <h1><span class="light">KISHORE </span>BLOG</h1> -->
+  <!-- <span class="spacer"></span> -->
+  <a mat-button
+  [routerLink]="['/home']"
+  routerLinkActive="active">HOME</a>
+  <a mat-button
+  [routerLink]="['/about']"
+  routerLinkActive="active">ABOUT</a>
+  <a mat-button
+  [routerLink]="['/contact']"
+  routerLinkActive="active">CONTACT</a>
+  <span class="spacer"></span>
+  <div class="link_social">
+  <a (click) = "redirect_social('linkedin')" matTooltip = "LinkedIn"><i class="fa fa-linkedin-square"></i></a>
+  <a (click) = "redirect_social('github')" matTooltip = "GitHub"><i class="fa fa-github"></i></a>
+  <a (click) = "redirect_social('twitter')" matTooltip = "Twitter"><i class="fa fa-twitter"></i></a>
+  <a (click) = "redirect_social('instagram')" matTooltip = "Instagram"><i class="fa fa-instagram"></i></a>
+</div>
+</mat-toolbar>
+<!-- <div background-image="assets/bg.jpg"> -->
+<router-outlet></router-outlet>
+<!-- </div> -->
+
