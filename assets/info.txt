@@ -1,0 +1,10 @@
+<p>Around 2+ years of professional experience. 1.5 years in developing software using C#/Java and 1 year in Application development.</p>
+<p>Proficient in C# with strong Object-Oriented knowledge.</p>
+<p>Good Knowledge and hands on experience in design and development of several web-based applications, Server/Client and Distributed applications.</p>
+<p>Experience of creating rich UI applications in WPF 4.5/4.0 along with XAML programming and Visual Studio.</p>
+<p>1 year of experience in developing applications using machine learning and deep learning algorithms.</p>
+<p>Hands-on experience in developing Enterprise level Web Applications using HTML/HTML5, CSS/CSS3, JAVASCRIPT, ANGULAR 2 and HTML SESSIONS and implementing Data Structures using Java.</p>
+<p>Expertise in using of Java, JavaFX and MySQL to create server-side applications.</p>
+<p>Extensive experience in relational databases for creating Tables, Views, Stored procedures and writing queries using SQL in Microsoft SQL server and Oracle.</p>
+<p>Hands-on experience in using the Integrated Development Environments such as Eclipse, NetBeans, Visual Studio, MATLAB and Android Studio.</p>
+<p>Developed Several Android applications using Android Studio. </p>
