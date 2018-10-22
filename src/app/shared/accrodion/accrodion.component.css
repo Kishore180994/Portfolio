@@ -1,0 +1,32 @@
+.panel-heading{
+    background-color: #3498db;
+    border-bottom: 1px solid #258cd1;
+    text-align: center;
+    font-weight: 300;
+    padding: 2em;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: background-color 0.5s 
+}
+.panel-heading:before{
+    content: "+";
+    font-size: 1.5em;
+    line-height: 0.5em;
+    float: left;
+    transition: transform 0.3s ease-in-out;
+}
+.panel-heading:hover{
+    background-color: #2980b9;
+}
+.pointer-cursor{
+    cursor: pointer;
+}
+
+.panel-body{
+    min-height: 20rem;
+}
+
+.mat-panel-description{
+    height: 40rem;
+}

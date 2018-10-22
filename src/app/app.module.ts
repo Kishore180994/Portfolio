@@ -45,6 +45,7 @@ import {
   MatTreeModule,
 } from '@angular/material';
 import { HttpModule } from '@angular/http';
+import { AccrodionComponent } from './shared/accrodion/accrodion.component';
 
 @NgModule({
   exports: [
@@ -83,7 +84,8 @@ import { HttpModule } from '@angular/http';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-  ]
+  ],
+  declarations: []
 })
 export class MaterialMode{}
 

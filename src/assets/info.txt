@@ -1,4 +1,4 @@
-<p>Around 2+ years of professional experience. 1.5 years in developing software using C#/Java and 1 year in Application development.</p>
+<p color="#ff6701">Around 2+ years of professional experience. 1.5 years in developing software using C#/Java and 1 year in Application development.</p>
 <p>Proficient in C# with strong Object-Oriented knowledge.</p>
 <p>Good Knowledge and hands on experience in design and development of several web-based applications, Server/Client and Distributed applications.</p>
 <p>Experience of creating rich UI applications in WPF 4.5/4.0 along with XAML programming and Visual Studio.</p>

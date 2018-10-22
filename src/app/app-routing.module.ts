@@ -7,13 +7,14 @@ import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HomeComponent } from './home/home.component';
 import { MainHomeComponent } from './main-home/main-home.component';
+import { AccrodionComponent } from './shared/accrodion/accrodion.component';
 
 export const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'contact', component: PageComponent},
-  {path: 'resume', component: ResumeComponent},
+  {path: 'home', component: HomeComponent, data: { animation: 'home' } },
+  {path: 'about', component: AboutComponent, data: { animation: 'about' } },
+  {path: 'contact', component: PageComponent, data: { animation: 'contact' } },
+  {path: 'resume', component: ResumeComponent, data: { animation: 'resume' } },
   {path: '**', redirectTo: '/home', pathMatch: 'full'},
 ];
 
@@ -28,4 +29,4 @@ export const appRoutes: Routes = [
 })
 export class AppRoutingModule {
 }
-export const routingComponents = [HomeComponent, AboutComponent, PageComponent, ResumeComponent, MainHomeComponent];
+export const routingComponents = [HomeComponent, AboutComponent, PageComponent, ResumeComponent, MainHomeComponent, AccrodionComponent];

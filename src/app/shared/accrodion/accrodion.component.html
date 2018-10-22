@@ -1,0 +1,23 @@
+<!-- <div class="panel-primary">
+<div class="panel-heading pointer-cursor" (click)="expandPanel()">This is the heading</div>
+<div class="panel-body" [hidden]="panelExpanded">Hey Buddy</div>
+</div> -->
+
+<mat-accordion>
+
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        This is the expansion 1 title
+      </mat-expansion-panel-header>
+    <p [innerHTML]="fin"></p>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        This is the expansion 2 title
+      </mat-expansion-panel-header>
+  
+      This the expansion 2 content
+  
+    </mat-expansion-panel>
+  
+  </mat-accordion>

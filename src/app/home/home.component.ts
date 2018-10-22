@@ -3,16 +3,18 @@ import { ActivatedRoute, Router, ɵROUTER_PROVIDERS} from '@angular/router';
 import { ContentService } from '../shared/services/content.service';
 import { Links } from './links';
 import { slideInOutAnimation } from '../slideInOutAnimation';
+
 import { AppRoutingModule } from '../app-routing.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { verticalTransitions } from '../verticalTransitions';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  animations: [slideInOutAnimation],
-  host: { '[@slideInOutAnimation]': '' }
+  // animations: [verticalTransitions],
+  // host: { '[@verticalTransitions]': '' }
 })
 
 @NgModule({

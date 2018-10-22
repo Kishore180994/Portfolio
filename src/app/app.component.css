@@ -1,5 +1,5 @@
 mat-toolbar {
-    position: relative;
+    position: fixed;
     z-index: 1;
     overflow-x: auto;
     background-color: #000000;
@@ -11,6 +11,9 @@ mat-toolbar {
     justify-content:space-between;
   }
   
+.pointer-cursor{
+  cursor: pointer;
+}
   .spacer {
     flex: 1 1 auto;
   }
@@ -33,6 +36,7 @@ mat-toolbar {
     background-color: #49a8f5;
     color:#ffffff;
   }
+  
   @font-face {
     font-family: "Harabara Bold";
     src: url("../assets/fonts/raleway/Raleway-Black.ttf");
@@ -51,3 +55,5 @@ mat-toolbar {
   h1 .light {
     font-weight: 50;
   }
+
+  

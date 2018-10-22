@@ -26,7 +26,6 @@
 </head>
 
 <body id="top">  
-  <app-root></app-root>
         <!-- intro section
    ================================================== -->
    <div id="intro" [ngStyle]="setBgStyle()" (document:mousemove)="onMouseMove($event)">   
@@ -54,7 +53,7 @@
         
       </div>   		 		
     </div> <!-- /intro-content --> 
-    <ul class="intro-social">       
+    <ul class="intro-social pointer-cursor">       
         <li><a (click) = "redirect_social('linkedin')" matTooltip = "LinkedIn"><i class="fa fa-linkedin-square"></i></a></li>
         <li><a (click) = "redirect_social('github')" matTooltip = "GitHub"><i class="fa fa-github"></i></a></li>
         <li><a (click) = "redirect_social('twitter')" matTooltip = "Twitter"><i class="fa fa-twitter"></i></a></li>

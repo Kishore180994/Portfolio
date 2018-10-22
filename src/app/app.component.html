@@ -9,19 +9,22 @@
   routerLinkActive="active">HOME</a>
   <a mat-button
   [routerLink]="['/about']"
-  routerLinkActive="active">ABOUT</a>
+  routerLinkActive="active" [ngStyle]="{'background-color': color}">ABOUT</a>
   <a mat-button
   [routerLink]="['/contact']"
   routerLinkActive="active">CONTACT</a>
   <span class="spacer"></span>
-  <div class="link_social">
-  <a (click) = "redirect_social('linkedin')" matTooltip = "LinkedIn"><i class="fa fa-linkedin-square"></i></a>
+  <div class="link_social pointer-cursor">
+  <a (click) = "redirect_social('linkedin')" matTooltip = "LinkedIn" [ngStyle]="{'background-color': color}"><i class="fa fa-linkedin-square"></i></a>
   <a (click) = "redirect_social('github')" matTooltip = "GitHub"><i class="fa fa-github"></i></a>
   <a (click) = "redirect_social('twitter')" matTooltip = "Twitter"><i class="fa fa-twitter"></i></a>
   <a (click) = "redirect_social('instagram')" matTooltip = "Instagram"><i class="fa fa-instagram"></i></a>
 </div>
 </mat-toolbar>
 <!-- <div background-image="assets/bg.jpg"> -->
-<router-outlet></router-outlet>
+
+  <div [@slideInOut]="triggerAnimation(route)">
+    <router-outlet #route="outlet"></router-outlet>
+  </div>
 <!-- </div> -->
 
