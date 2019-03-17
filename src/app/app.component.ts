@@ -2,6 +2,7 @@ import * as THREE from "three";
 
 import { Component, ViewChild, ElementRef } from "@angular/core";
 import { DeviceDetectorService } from "ngx-device-detector";
+import { Popup } from 'ng2-opd-popup';
 import {
   trigger,
   transition,
@@ -11,6 +12,7 @@ import {
   animate,
   animateChild
 } from "@angular/animations";
+
 import { AngularFirestore } from "angularfire2/firestore";
 import { Router, NavigationEnd } from "@angular/router";
 import { ViewEncapsulation } from "@angular/core";
@@ -113,9 +115,11 @@ export class AppComponent {
   Items: Observable<any>[];
   constructor(
     private deviceService: DeviceDetectorService,
+    private popup: Popup,
     private router: Router,
     db: AngularFirestore
   ) {
+
     // this.Items = db.collection['Items'].valueChanges();
     // console.log("Items: "+this.Items);
     this.deviceInfo = deviceService.getDeviceInfo();
@@ -132,9 +136,22 @@ export class AppComponent {
       }
     });
   }
+  clickButton() {
+    this.popup.show();
+  }
   ngOnInit() {
     // this.service.incrementPageCount().then(data => this.service.changeCount(data));
-
+    this.popup.options = {
+      header: "Notification",
+      color: "#5cb85c", // red, blue....
+      widthProsentage: 40, // The with of the popou measured by browser width
+      animationDuration: 1, // in seconds, 0 = no animation
+      showButtons: true, // You can hide this in case you want to use custom buttons
+      confirmBtnContent: "Close", // The text on your confirm button
+      cancleBtnContent: "", // the text on your cancel button
+      confirmBtnClass: "btn btn-default", // your class for styling the confirm button
+      animation: "fadeInDown" // 'fadeInLeft', 'fadeInRight', 'fadeInUp', 'bounceIn','bounceInDown'
+    };
     this.myStyle = {
       position: "fixed",
       width: "100%",
@@ -163,6 +180,16 @@ export class AppComponent {
     // let currentUrl = this.router.url; /// this will give you current url
     // console.log("Current URL: "+currentUrl);
     // your logic to know if its my home page.
+  }
+
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    if (this.isMobile || this.isTablet) this.clickButton();
+  }
+
+  YourConfirmEvent() {
+    this.popup.hide();
   }
   getPage(outlet) {
     console.log("Outlet: " + outlet.activatedRouteData["page"]);

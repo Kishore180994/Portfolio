@@ -55,6 +55,7 @@ import { ParticlesModule } from "angular-particle";
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { NO_ERRORS_SCHEMA } from "@angular/core";
 import { CubeComponent } from "./cube/cube.component";
+import { PopupModule } from 'ng2-opd-popup';
 
 @NgModule({
   exports: [
@@ -96,7 +97,7 @@ import { CubeComponent } from "./cube/cube.component";
   ],
   declarations: [CubeComponent]
 })
-export class MaterialMode {}
+export class MaterialMode { }
 
 @NgModule({
   declarations: [AppComponent, FullpageDirective, routingComponents],
@@ -114,6 +115,7 @@ export class MaterialMode {}
     MDBBootstrapModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase, "angularfs"),
     AngularFirestoreModule,
+    PopupModule.forRoot(),
     DeviceDetectorModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyDf-T2SLsOBCxPwDGBYpXg"
@@ -123,4 +125,4 @@ export class MaterialMode {}
   providers: [ContentService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -9,11 +9,12 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noStrictGenericChecks": true,
     "target": "es5",
     "types": [
       "node",
       "webpack-env"
-   ],
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -22,5 +23,8 @@
       "dom"
     ]
   },
-  "include": ["node_modules/angular-bootstrap-md/**/*.ts","src/**/*.ts"]
+  "include": [
+    "node_modules/angular-bootstrap-md/**/*.ts",
+    "src/**/*.ts"
+  ]
 }

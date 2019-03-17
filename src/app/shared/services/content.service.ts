@@ -4,7 +4,7 @@ import {
   AngularFirestoreCollection,
   AngularFirestoreDocument
 } from "angularfire2/firestore";
-import { mail } from "src/app/models/mail";
+import { mail } from "../../models/mail";
 import { Observable, BehaviorSubject } from "rxjs";
 import { map } from "rxjs/operators";
 import * as THREE from "three";
@@ -45,7 +45,7 @@ export class ContentService implements OnInit {
     );
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
   getItems() {
     return this.Items;
   }
