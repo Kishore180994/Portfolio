@@ -1,35 +1,81 @@
 <body>
-<div class="accordion">
-  <ul>
-    <li tabindex="1" (mouseenter) ="mouseEnter('div a') "  (mouseleave) ="mouseLeave('div A')">
-      <div>
-          <h1 *ngIf = "showA">About</h1>
-        <div class="ref">
-          <h2 *ngIf = "showB">About</h2>
-          <p *ngIf = "showB">I'm a software developer and front-end developer along with Data Analyst skills, Masters graduate of computer science at the University of Dayton.
-Apart from being a coder, You will find me cooking, library or working out in gym. I'm a recent graduate and looking for entry-level opportunities. 
-Always enthustiastc about learing new skills and building up the knowledge. I'd love to interact with people.</p>
-          </div>
-      </div>
-    </li>
-    <li tabindex="2" (mouseenter) ="mouseEnter('div a') "  (mouseleave) ="mouseLeave('div A')">
-      <div>
-          <h1 *ngIf = "showA">Coder</h1>
-        <div class="ref">
-          <h2 *ngIf = "showB">Coder</h2>
-          <p *ngIf = "showB">Body</p>
+  <div class="accordion">
+    <ul class="ulist">
+      <li class="list" tabindex="1" (mouseenter)="mouseEnter('div a') " (mouseleave)="mouseLeave('div A')">
+        <div>
+          <h1 *ngIf="showA">About</h1>
+          <div class="ref">
+            <h2 *ngIf="showB">About</h2>
+            <div class="about" *ngIf="showB">I am a recent grad from the <strong>University of Dayton</strong> looking
+              for entry-level
+              opportunities on <strong>full stack developer</strong> and <strong>Java</strong>
+              developer positions. I am looking for a challenging role in a reputable organization to utilize my Java
+              and full stack
+              programming skills as well as to enhance my knowledge about new and emerging technologies in software
+              Industry.
+              <br />
+              <br />
+              Here is my short review of my experience:
+              <br />
+      <li>Around 2+ years of professional experience as a Software Engineer and developing web applications
+        using HTML5, CSS, JavaScript, TypeScript, Angular 6, Node.js, Bootstrap, Java/J2EE.</li>
+      <li>1.5 years in
+        developing software using C# and Java and one year in Application development.</li>
+      <li>Hands-on experience in
+        using Restful API’s for CRUD operations using AXIOS and FETCH API.</li>
+      <li>Expertise in using Java, JavaFX, and
+        MySQL and NoSQL to create server-side applications.</li>
+      <li>Extensively used the repositories like GIT and
+        Bitbucket.</li>
+  </div>
+  </div>
+  </div>
+  </li>
+  <li class="list" tabindex="2" (mouseenter)="mouseEnter('div a') " (mouseleave)="mouseLeave('div A')">
+    <div>
+      <h1 *ngIf="showA">Coder</h1>
+      <div class="ref">
+        <h2 *ngIf="showB">Coder</h2>
+        <div class="about" *ngIf="showB">
+          These are the languages and frameworks that define me as a back-end coder.
+          <ul>
+            <li>Spring-Boot</li>
+            <li>Spring-MVC</li>
+            <li>Java</li>
+            <li>C#</li>
+            <li>Angualar Firebase</li>
+            <li>Express JS</li>
+            <li>C++</li>
+            <li>MySQL</li>
+            <li>NoSQL</li>
+            <li>MATLAB</li>
+            <li>WPF</li>
+            <li>HTML</li>
+          </ul>
         </div>
       </div>
-    </li>
-    <li tabindex="3" (mouseenter) ="mouseEnter('div a') "  (mouseleave) ="mouseLeave('div A')">
-      <div>
-          <h1 *ngIf = "showA">Designer</h1>
-        <div class="ref">
-          <h2 *ngIf = "showB">Designer</h2>
-          <p *ngIf = "showB">Body</p>
+    </div>
+  </li>
+  <li class="list" tabindex="3" (mouseenter)="mouseEnter('div a') " (mouseleave)="mouseLeave('div A')">
+    <div>
+      <h1 *ngIf="showA">Designer</h1>
+      <div class="ref">
+        <h2 *ngIf="showB">Designer</h2>
+        <div class="about" *ngIf="showB">
+          Being a designer completely defines my creativity along with my coding skills
+          <ul>
+            <li>Angular</li>
+            <li>Vue Js</li>
+            <li>React Js</li>
+            <li>HTML 5</li>
+            <li>CSS/SCSS/Sass</li>
+            <li>Bootstrap</li>
+            <li>Unity 3D</li>
+          </ul>
         </div>
       </div>
-    </li>
+    </div>
+  </li>
   </ul>
-</div>
+  </div>
 </body>

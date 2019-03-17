@@ -1,16 +1,119 @@
-<!-- <div class="split left">
-    <div class="centered">
-      <img src="img_avatar2.png" alt="Avatar woman">
-      <h2>Jane Flex</h2>
-      <p>Some text.</p>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCshEndCstEW6lymOCuA6JtmVmDfAWufPc",
+    authDomain: "portfolio-a2bd3.firebaseapp.com",
+    databaseURL: "https://portfolio-a2bd3.firebaseio.com",
+    projectId: "portfolio-a2bd3",
+    storageBucket: "portfolio-a2bd3.appspot.com",
+    messagingSenderId: "639290213267"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+
+<body>
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+
+
+  <div class="containerParent contact-form">
+    <div class="container left" [@changeState]="currentState" (mouseenter)="formChange('forma')" (mouseleave)="formChange('none')">
+      <div class="overlay" style="background-image: url(../../assets/web-form1.jpg)">
+
+      </div>
+      <table class="table">
+        <tr class="table_cell">
+          <td class="icon_row" style="width:30%">
+        <tr class="icon_col">
+          <i class="fa fa-map-marker"></i>
+        </tr>
+        </td>
+        <td class="data_cell">
+          <tr class="data_row_head">WHERE TO FIND ME</tr>
+          <tr class="data_row" style="font-size: 0.85rem"> 345 Firwood Dr. <br />Dayton, OH - 45419</tr>
+        </td>
+        </tr>
+
+        <tr class="table_cell">
+          <td class="icon_row">
+        <tr class="icon_col">
+          <i class="fa fa-envelope"></i>
+        </tr>
+        </td>
+        <td class="data_cell">
+          <tr class="data_row_head">EMAIL ME AT</tr>
+          <tr class="data_row">kishore.vds60@gmail.com</tr>
+        </td>
+        </tr>
+
+        <tr class="table_cell">
+          <td class="icon_row">
+        <tr class="icon_col">
+          <i class="fa fa-phone"></i>
+        </tr>
+        </td>
+        <td class="data_cell">
+          <tr class="data_row_head">CALL ME AT</tr>
+          <tr class="data_row">phone: (937) 829-2112</tr>
+        </td>
+        </tr>
+      </table>
+    </div>
+    <div class="container right" [@changeState]="currentState" (mouseenter)="formChange('formc')" (mouseleave)="formChange('none')">
+
+      <form #MailForm="ngForm" (ngSubmit)="onSubmit()">
+        <h1>Contact Me</h1>
+        <div class="form-group">
+          <!-- <label for="name">Name</label> -->
+          <input type="text" class="form-control" placeholder="Name" id="name" required [(ngModel)]="model[0].name"
+            #name="ngModel" name="name">
+          <!-- <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Name is required
+          </div> -->
+        </div>
+
+        <div class="form-group">
+          <!-- <label for="alterEgo">Subject</label> -->
+          <input type="text" class="form-control" placeholder="Subject" id="subject" required [(ngModel)]="model[0].subject"
+            #subject="ngModel" name="subject">
+          <!-- <div [hidden]="subject.valid || subject.pristine" class="alert alert-danger">
+          Subject is required
+        </div> -->
+        </div>
+
+        <div class="form-group">
+          <!-- <label for="alterEgo">Email</label> -->
+          <input type="text" class="form-control" placeholder="Email" id="email" required [(ngModel)]="model[0].email"
+            #email="ngModel" name="email">
+          <!-- <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+          Email is required
+        </div> -->
+        </div>
+
+        <div class="form-group">
+          <!-- <label for="alterEgo">Message</label> -->
+          <textarea type="textarea" class="form-control" placeholder="Enter you message" id="message" required
+            [(ngModel)]="model[0].message" #message="ngModel" name="message">
+      </textarea>
+          <!-- <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+          Message is required
+        </div> -->
+        </div>
+
+        <button type="submit" class="btn btn-success" (click)="MailUpdate()" [disabled]="!MailForm.form.valid">Submit</button>
+
+      </form>
     </div>
   </div>
-  
-  <div class="split right">
-    <div class="centered">
-      <img src="img_avatar.png" alt="Avatar man">
-      {{fin}}
-      <p>Some text here too.</p>
-    </div>
-  </div> -->
-  <app-accrodion></app-accrodion>
+  <!-- <div class="overlay"></div> -->
+
+  <div class="m-footer">
+    <!-- <p>Creative-.-Hardworking-.-Skilled</p> -->
+    <p>Commitment * Creative * Dedication</p>
+  </div>
+
+</body>

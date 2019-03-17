@@ -1,20 +1,22 @@
-import { Component, OnInit, NgZone, NgModule } from '@angular/core';
+import { Component, OnInit, NgZone, NgModule, HostListener } from '@angular/core';
 import { ActivatedRoute, Router, ɵROUTER_PROVIDERS} from '@angular/router';
 import { ContentService } from '../shared/services/content.service';
 import { Links } from './links';
 import { slideInOutAnimation } from '../slideInOutAnimation';
+import { BOUNCE_IN, BOUNCE_OUT } from 'angular-bounce';
 
 import { AppRoutingModule } from '../app-routing.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { verticalTransitions } from '../verticalTransitions';
+import { trigger, transition, style, query, stagger, animate, state, useAnimation } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  // animations: [verticalTransitions],
-  // host: { '[@verticalTransitions]': '' }
+  styleUrls: ['./home.component.scss'],
+  animations: [verticalTransitions],
+  host: { '[@verticalTransitions]': '' }
 })
 
 @NgModule({
@@ -27,6 +29,7 @@ export class HomeComponent implements OnInit {
   console = console;
   element: HTMLElement;
   e:any;
+  currentState = 'inactive';
   constructor(private route: ActivatedRoute,
         private router: Router) { }
 
@@ -34,6 +37,13 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     // const homeData = this.route.snapshot.data['home'];
     // this.home = this.contentService.homes[homeData];
+    this.currentState = this.currentState === 'inactive' ? 'active' : 'inactive';
+    console.log(this.currentState);
+  }
+
+  changeState() {
+    
+    console.log(this.currentState);
   }
 
   onMouseMove(e) {
@@ -41,8 +51,10 @@ export class HomeComponent implements OnInit {
   }
 
   setBgStyle(){
+    try{
     var moveX=((this.e.x)*-1/5);
     var moveY=((this.e.y)*-1/5);
+    }catch(error){}
     // console.log(moveX);
     let styles = {
       // 'background-image': 'url(../../assets/images/sw.jpg)',
@@ -51,10 +63,20 @@ export class HomeComponent implements OnInit {
     return styles;
   }
 
+  @HostListener('mousewheel', ['$event']) onMousewheel(event) {
+    if(event.wheelDelta>0){
+      this.router.navigate(['about']);
+    }
+    if(event.wheelDelta<0){
+      // event.srcElement.style.setProperty('transition','all 200ms ease-out');
+      // this.router.navigate(['home']);
+    }
+  }
 
   scrollToElement(){
     // this.router.navigate(['contact'],{relativeTo: this.route});
     this.router.navigate(['about']);
+    this.currentState = 'inactive';
     //window.open('home','_self');
   }
   

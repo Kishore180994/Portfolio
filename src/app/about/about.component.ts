@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, HostListener, Directive } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { ContentService } from '../shared/services/content.service';import { DOCUMENT, CommonModule } from '@angular/common';
 import { slideInOutAnimation } from '../slideInOutAnimation';
@@ -15,8 +15,9 @@ import { verticalTransitions } from '../verticalTransitions';
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  // animations: [verticalTransitions],
-  // host: { '[@verticalTransitions]': '' },
+  
+  animations: [verticalTransitions],
+  host: { '[@verticalTransitions]': '' },
   encapsulation: ViewEncapsulation.None
 })
 export class AboutComponent implements OnInit {
@@ -53,5 +54,15 @@ export class AboutComponent implements OnInit {
   console.log('mouse leave :' + div);
   this.showB = false;
   this.showA = true;
+}
+
+@HostListener('mousewheel', ['$event']) onMousewheel(event) {
+  if(event.wheelDelta>0){
+    this.router.navigate(['resume']);
+  }
+  if(event.wheelDelta<0){
+    event.srcElement.style.setProperty('transition','all 200ms ease-out');
+    this.router.navigate(['home']);
+  }
 }
 }

@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+:host {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}
+
+mat-card {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+mat-card-header {
+    color: #ff0000;
+}
+
+mat-card-content {
+    padding: 8px;
+}
+
+#intro {
+    background: #151515 url(../../assets/images/sw3.jpg) center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: 140% 140%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    display: block;
+    position: fixed;
+    // z-index: 0;
+    text-align: center;
+}
+
+.intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    opacity: .45;
+}
+
+.img-circle {
+    border-radius: 20%;
+    height: auto;
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 6.5%;
+}
+
+.intro-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    text-align: center;
+    padding-top: 5%;
+    // z-index: 1;
+    -webkit-transform: translateY(-2.1rem);
+    -ms-transform: translateY(-2.1rem);
+    transform: translateY(-2.1rem);
+}
+
+@font-face {
+    font-family: "spartan";
+    src: url(../../assets/fonts/LeagueSpartan-Bold.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "lorareg";
+    src: url(../../assets/fonts/lora/lora-regular-webfont.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "poppinsbold";
+    src: url(../../assets/fonts/poppins/poppins-medium-webfont.ttf) format("truetype");
+}
+
+.intro-content h1 {
+    color: rgb(255, 255, 255);
+    font-family: "spartan", sans-serif;
+    font-size: 10rem;
+    line-height: 1.071;
+    max-width: 900px;
+    margin-top: 0;
+    margin-bottom: .6rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.intro-content h2 {
+    color: #119dfaa4;
+    font-family: "poppinsbold", sans-serif;
+    font-size: 2.3rem;
+    line-height: 1.071;
+    max-width: 900px;
+    margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.intro-content h5 {
+    color: #ffffff;
+    font-family: "spartan", sans-serif;
+    font-size: 135%;
+    line-height: 1.565;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.intro-content .intro-position {
+    font-family: "lorareg", serif;
+    font-size: 70%;
+    line-height: 2.8rem;
+    height: auto;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(0.25rem);
+    -webkit-transform: translateY(0.25rem);
+    -ms-transform: translateY(0.25rem);
+}
+
+.intro-content .intro-position span {
+    display: inline-block;
+}
+
+.intro-content .intro-position span::after {
+    content: "|";
+    text-align: center;
+    display: inline-block;
+    padding: 0 8px 0 14px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.intro-content .intro-position span:first-child::before {
+    content: "|";
+    text-align: center;
+    display: inline-block;
+    padding: 0 14px 0 8px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.intro-content .button {
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3);
+    height: 3.4rem;
+    line-height: 3.4rem;
+    padding: 0 1.5rem 0 1.5rem;
+    margin-top: .6rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    transform: translateY(-0.4rem);
+    -webkit-transform: translateY(-0.4rem);
+    -ms-transform: translateY(-0.4rem);
+}
+
+.intro-content .button:hover,
+.intro-content .button:focus {
+    border-color: #49a8f5;
+    color: #FFFFFF;
+}
+
+.intro-content .button::after {
+    display: inline-block;
+    content: "\f107";
+    color: #FFFFFF;
+    font-family: fontAwesome;
+    font-size: 1rem;
+    line-height: inherit;
+    text-align: center;
+    position: relative;
+    left: 1.2rem;
+}
+
+.intro-social {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 8%;
+    font-size: 2.5rem;
+    margin: auto;
+    padding: 0;
+}
+
+.intro-social li {
+    display: inline-block;
+    margin: 0 1%;
+    padding: 0;
+}
+
+.intro-social li a,
+.intro-social li a:visited {
+    color: #FFFFFF;
+}
+
+.intro-social li a:hover,
+.intro-social li a:focus {
+    color: #49a8f5;
+}
+
+.imgContainer {
+    position: relative;
+    z-index: 1;
+    // background-color: #ededed;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    // min-height: 100vh;
+    // overflow: hidden;
+}
+
+.pulse {
+    z-index: -1;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 30rem;
+    circle {
+        fill: #ff5154;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: 50% 50%;
+        animation: pulse 2s cubic-bezier(.5, .5, 0, 1);
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        &:nth-child(2) {
+            fill: #7fc6a4;
+            opacity: 0;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation: pulse 2s 0.75s cubic-bezier(.5, .5, 0, 1);
+        }
+        &:nth-child(3) {
+            fill: #e5f77d;
+            opacity: 0;
+            animation: pulse 2s 1.5s cubic-bezier(.5, .5, 0, 1);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+}
+
+@keyframes pulse {
+    25% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media(max-width: 500px) {
+    .intro-content {
+        .intro-position {
+            font-size: 40%;
+        }
+        h5 {
+            font-size: 70%;
+            padding-top: 10%;
+        }
+    }
+    .img-circle {
+        padding-top: 30%;
+    }
+    .pulse {
+        top: 87%;
+    }
+}
