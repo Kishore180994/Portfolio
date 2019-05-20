@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener} from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 import { cardTemplate } from './cardTemplate'
@@ -9,21 +9,21 @@ import { cardTemplate } from './cardTemplate'
   styleUrls: ['./portfoilio.component.sass']
 })
 export class PortfoilioComponent implements OnInit {
-  numOfProjects = 9;
-  
-  constructor(private _router:Router) { }
+  numOfProjects = 10;
+
+  constructor(private _router: Router) { }
 
   ngOnInit() {
-  
+
   }
 
 
 
-  details(Id: number){
+  details(Id: number) {
     console.log(Id);
-    this._router.navigate(['/portfolio',Id]);
+    this._router.navigate(['/portfolio', Id]);
   }
-  
+
   // @HostListener('mousewheel', ['$event']) onMousewheel(event) {
   //   if(event.wheelDelta>180){
   //     this._router.navigate(['contact']);

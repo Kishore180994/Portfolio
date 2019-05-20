@@ -10,17 +10,17 @@ import { ResumeComponent } from "./resume/resume.component";
 import { PortfoilioComponent } from "./portfoilio/portfoilio.component";
 
 export const appRoutes: Routes = [
-  { path: "", redirectTo: "/home", pathMatch: "full" },
-  { path: "home", component: HomeComponent, data: { animation: "home" } },
-  { path: "about", component: AboutComponent, data: { animation: "about" } },
-  { path: "contact", component: PageComponent, data: { animation: "contact" } },
+  // { path: "", redirectTo: "", pathMatch: "full" },
+  { path: "", component: HomeComponent, data: { animation: "home" } },
+  { path: "/about", component: AboutComponent, data: { animation: "about" } },
+  { path: "/contact", component: PageComponent, data: { animation: "contact" } },
   {
-    path: "portfolio",
+    path: "/portfolio",
     component: PortfoilioComponent,
     data: { animation: "portfolio" }
   },
-  { path: "resume", component: ResumeComponent, data: { animation: "resume" } },
-  { path: "**", redirectTo: "/home", pathMatch: "full" }
+  { path: "/resume", component: ResumeComponent, data: { animation: "resume" } },
+  { path: "**", redirectTo: "", pathMatch: "full" }
 ];
 
 @NgModule({
@@ -33,7 +33,7 @@ export const appRoutes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 export const routingComponents = [
   HomeComponent,
   AboutComponent,
