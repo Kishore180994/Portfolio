@@ -12,8 +12,8 @@ import { PortfoilioComponent } from "./portfoilio/portfoilio.component";
 export const appRoutes: Routes = [
   // { path: "", redirectTo: "", pathMatch: "full" },
   { path: "", component: HomeComponent, data: { animation: "home" } },
-  { path: "/about", component: AboutComponent, data: { animation: "about" } },
-  { path: "/contact", component: PageComponent, data: { animation: "contact" } },
+  { path: "about", component: AboutComponent, data: { animation: "about" } },
+  { path: "contact", component: PageComponent, data: { animation: "contact" } },
   {
     path: "/portfolio",
     component: PortfoilioComponent,
