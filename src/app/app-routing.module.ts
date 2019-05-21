@@ -15,11 +15,11 @@ export const appRoutes: Routes = [
   { path: "about", component: AboutComponent, data: { animation: "about" } },
   { path: "contact", component: PageComponent, data: { animation: "contact" } },
   {
-    path: "/portfolio",
+    path: "portfolio",
     component: PortfoilioComponent,
     data: { animation: "portfolio" }
   },
-  { path: "/resume", component: ResumeComponent, data: { animation: "resume" } },
+  { path: "resume", component: ResumeComponent, data: { animation: "resume" } },
   { path: "**", redirectTo: "", pathMatch: "full" }
 ];
 
